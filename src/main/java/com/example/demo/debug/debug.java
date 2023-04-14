@@ -1,4 +1,4 @@
-package com.example.demo.study.debug;
+package com.example.demo.debug;
 
 /**
  * 断点调试 循环内的断点相当于多个断点 即十次循环需要十次 Resume Program

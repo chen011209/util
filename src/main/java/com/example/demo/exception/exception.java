@@ -1,4 +1,4 @@
-package com.example.demo.study.exception;
+package com.example.demo.exception;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package com.example.demo.study.debug;
+package com.example.demo.debug;
 
 public class MyEx extends Exception{
 }
