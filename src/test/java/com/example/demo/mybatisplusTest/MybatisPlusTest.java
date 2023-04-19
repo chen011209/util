@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.mybatisplusTest;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootTest
-class DemoApplicationTests {
+class MybatisPlusTest {
 
 
 
