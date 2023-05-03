@@ -1,4 +1,4 @@
-package com.example.demo.study.stream函数式编程;
+package com.example.demo.study.java.stream函数式编程;
 
 public class Student {
 	private String name;

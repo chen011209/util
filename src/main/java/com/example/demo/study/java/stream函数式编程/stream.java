@@ -1,4 +1,4 @@
-package com.example.demo.study.stream函数式编程;
+package com.example.demo.study.java.stream函数式编程;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
