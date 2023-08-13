@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.数组.双指针;
+package com.example.demo.algorithm.leetcode.数组.双指针;
 
 class Solution {
     //暴力嗯解

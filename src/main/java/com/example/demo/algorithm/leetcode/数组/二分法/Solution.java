@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.数组.二分法;
+package com.example.demo.algorithm.leetcode.数组.二分法;
 
 class Solution {
     public int search(int[] nums, int target) {
@@ -16,4 +16,6 @@ class Solution {
         }
         return -1;
     }
+
+
 }

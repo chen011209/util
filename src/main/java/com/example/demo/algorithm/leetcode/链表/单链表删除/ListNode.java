@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.链表.单链表删除;
+package com.example.demo.algorithm.leetcode.链表.单链表删除;
 
 public class ListNode {
     int val;

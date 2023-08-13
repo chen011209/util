@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.数组.螺旋矩阵;
+package com.example.demo.algorithm.leetcode.数组.螺旋矩阵;
 
 class Solution {
     public int[][] generateMatrix(int n) {

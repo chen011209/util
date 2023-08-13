@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.数组.滑动窗口;
+package com.example.demo.algorithm.leetcode.数组.滑动窗口;
 
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {

@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode.数组.快慢指针;
+package com.example.demo.algorithm.leetcode.数组.快慢指针;
 
 class Solution {
     public int removeElement(int[] nums, int val) {

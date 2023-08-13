@@ -1,4 +1,4 @@
-package com.example.demo.study.leetcode;
+package com.example.demo.algorithm.leetcode;
 
 class MyLinkedList {
 
