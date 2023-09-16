@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.util.jsonUtil;
 
 public class A {
     String a;

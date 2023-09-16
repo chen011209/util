@@ -18,22 +18,38 @@ public class todo {
 
     public static void main(String[] args) throws Exception {
 
-//        System.out.println(HttpRequest.httpPostJson();
-        A a = new A("123",123);
 
-        HashMap<String,String> hashMap = new HashMap<>();
-        hashMap.put("a","aaa");
-        hashMap.put("b","bbb");
+        HttpRequest httpRequest = new HttpRequest();
+
+        HashMap<String,String> appTokenMap = new HashMap<>();
+        appTokenMap.put("appId","CYC_TEST");
+        appTokenMap.put("appSecret","cyc_TEST_123456_@");
+        appTokenMap.put("tenantid","xindeco");
+        appTokenMap.put("accountId","1454388596386563072");
+        appTokenMap.put("language","zh_CN");
+
+        String appTokenData = httpRequest.httpPostJson("http://localhost:8080/ierp/api/getAppToken.do", appTokenMap);
+
+        int i = appTokenData.indexOf("app_token");
+        String app_token = appTokenData.substring(i+12,i+48);
+
+        HashMap<String,String> accessTokenMap = new HashMap<>();
+        accessTokenMap.put("user","15060354899");
+        accessTokenMap.put("apptoken",app_token);
+        accessTokenMap.put("tenantid","xindeco");
+        accessTokenMap.put("accountId","1454388596386563072");
+        accessTokenMap.put("usertype","Mobile");
+        accessTokenMap.put("language","zh_CN");
 
 
-        System.out.println(JSON.toJSON(hashMap));
-        System.out.println(JSON.toJSON(a));
+
+        String accessTokenData = httpRequest.httpPostJson("http://localhost:8080/ierp/api/login.do", accessTokenMap);
 
 
-        String jsonStr1 = "{'a':'123456','i':'123'}";
-        // 调用parseObject()
-        A aa = JSON.parseObject(jsonStr1, A.class);
-        System.out.println("json字符串转简单java对象:"+aa.toString());
+        int j = accessTokenData.indexOf("access_token");
+
+        System.out.println(accessTokenData.substring(j+15,j+135));
+
 
     }
 

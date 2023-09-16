@@ -1,5 +1,6 @@
 package com.example.demo.util.http;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.hc.client5.http.ClientProtocolException;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.entity.UrlEncodedFormEntity;
@@ -20,6 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -28,16 +30,9 @@ import java.util.List;
 public class HttpRequest {
     // in milliseconds
     private static final int DEFAULT_TIMEOUT = 5000;
-    private URL url;
-    public HttpRequest(String url) {
-        try {
-            this.url = new URL(url);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
-    public String httpGetString() throws IOException {
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+    public String httpGetString(String url) throws IOException {
+        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         connection.setConnectTimeout(DEFAULT_TIMEOUT);
         connection.setReadTimeout(DEFAULT_TIMEOUT);
         connection.setRequestMethod("GET");
@@ -76,8 +71,7 @@ public class HttpRequest {
      * @return
      * @throws Exception
      */
-    public static String httpPostJson() throws Exception{
-        String url = "http://localhost:8080/ierp/api/getAppToken.do";
+    public String httpPostJson(String url,HashMap<String,String> hashMap) throws Exception{
 
         try (final CloseableHttpClient httpclient = HttpClients.createDefault()) {
             final HttpPost httppost = new HttpPost(url);
@@ -86,10 +80,10 @@ public class HttpRequest {
             httppost.setHeader("Accept", "application/json");
             httppost.setHeader("Content-type", "application/json");
 
-            final String json = "{\"appId\":\"CYC_TEST\",\"appSecret\":\"cyc_TEST_123456_@\",\"tenantid\":\"xindeco\",\"accountId\":\"1454388596386563072\",\"language\":\"zh_CN\"}";
 
-            System.out.println(json);
-            final StringEntity stringEntity = new StringEntity(json);
+            System.out.println(url);
+            System.out.println(JSON.toJSONString(hashMap));
+            final StringEntity stringEntity = new StringEntity(JSON.toJSONString(hashMap));
             httppost.setEntity(stringEntity);
 
 
