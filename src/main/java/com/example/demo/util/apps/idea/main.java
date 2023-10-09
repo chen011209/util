@@ -1,4 +1,4 @@
-package com.example.demo.study.apps.idea;
+package com.example.demo.util.apps.idea;
 
 /**
  * idea快捷键

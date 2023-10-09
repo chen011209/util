@@ -1,4 +1,4 @@
-package com.example.demo.study.apps.postman;
+package com.example.demo.util.apps.postman;
 
 
 /**

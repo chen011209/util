@@ -1,4 +1,4 @@
-package com.example.demo.study.apps.word;
+package com.example.demo.util.apps.word;
 
 public class main {
 	/**

@@ -1,4 +1,4 @@
-package com.example.demo.study.apps.docker;
+package com.example.demo.util.apps.docker;
 
 
 /**
