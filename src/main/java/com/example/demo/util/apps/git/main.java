@@ -17,6 +17,7 @@ package com.example.demo.util.apps.git;
  *
  * 右键直接删除远程分支
  *
+ * 测试代码冲突
  *
  */
 public class main {
