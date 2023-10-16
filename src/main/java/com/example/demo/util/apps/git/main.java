@@ -11,7 +11,7 @@ package com.example.demo.util.apps.git;
  *
  * git分支在idea中直接右键分支 new Branch就可以在本地创建分支 切换到新创建的分支后push就可以提交分支到远程
  *
- * checkout分支可以切换分支
+ * checkout分支可以切换分支 分支切换前先commit保存代码 或者用idea的smart check out
  *
  * 切回master主分支后 右键其他分支可以Merge其他分支到主分支 但是只在本地有 push后可以提交分支到远程
  *
