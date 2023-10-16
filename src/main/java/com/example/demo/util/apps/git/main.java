@@ -7,10 +7,16 @@ package com.example.demo.util.apps.git;
  *
  * git结构分为远程仓库 本地仓库 暂存区域 工作目录
  *
- * git回退直接check out revision 到最新的也check out到最新的版本 回退之前先提交代码
+ * git回退直接check out revision 到最新的也check out到最新的版本 回退之前先提交代码 防止丢失未提交代码
  *
+ * git分支在idea中直接右键分支 new Branch就可以在本地创建分支 切换到新创建的分支后push就可以提交分支到远程
+ *
+ * checkout分支可以切换分支
+ *
+ * 切回master主分支后 右键其他分支可以Merge其他分支到主分支 但是只在本地有 push后可以提交分支到远程
  *
  * test
+ *
  *
  */
 public class main {
