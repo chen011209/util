@@ -15,6 +15,8 @@ package com.example.demo.util.apps.git;
  *
  * 切回master主分支后 右键其他分支可以Merge其他分支到主分支 但是只在本地有 push后可以提交分支到远程
  *
+ * 右键直接删除远程分支
+ *
  *
  */
 public class main {
