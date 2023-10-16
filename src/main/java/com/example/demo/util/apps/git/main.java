@@ -21,4 +21,7 @@ package com.example.demo.util.apps.git;
  *
  */
 public class main {
+    public static void main(String[] args) {
+        System.out.println("mmm");
+    }
 }
