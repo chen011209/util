@@ -1,6 +1,5 @@
-package com.example.demo.util.file;
+package com.example.demo.util.code.file;
 
-import lombok.SneakyThrows;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.example.demo.util.http;
+package com.example.demo.util.code.http;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.hc.client5.http.ClientProtocolException;

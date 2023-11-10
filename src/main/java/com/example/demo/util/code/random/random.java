@@ -1,4 +1,4 @@
-package com.example.demo.util.random;
+package com.example.demo.util.code.random;
 
 import java.util.Random;
 

@@ -16,10 +16,17 @@ package com.example.demo.util.apps.git;
  * 切回master主分支后 右键其他分支可以Merge其他分支到主分支 但是只在本地有 push后可以提交分支到远程
  *
  * 右键直接删除远程分支
+ *
+ * 有冲突的时候可以选择需要接受的结果
 
  */
 public class main {
     public static void main(String[] args) {
         System.out.println("test");
+
+        Object[] objects = new Object[]{new Object(),new Object()};
+
+        System.out.println(objects.length);
+
     }
 }
