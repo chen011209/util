@@ -1,0 +1,70 @@
+VMware激活码 MC60H-DWHD5-H80U9-6V85M-8280D
+
+docker和虚拟机区别在于 docker不用模拟出新的内核 虚拟机需要模拟出全新的内核
+docker携带需要的依赖和运行的系统函数等 打包成为隔离的容器运行
+镜像是静态的 容器是实时运行的
+docker 可以使用数据卷 实现容器和数据的分离
+
+docker images
+docker ps -a  -a可以查看所有容器 包括已经停止的容器
+docker load -i xxx  加载包为镜像
+docker run --name my_container -p 80:80 -v html:/usr/share/nginx/html -d nginx
+-v指定数据卷挂载  
+-d deamon指定后台运行
+-p指定端口
+--name指定容器名
+nginx指定运行的镜像名称
+
+docker logs -f my_container   -f代表实时更新
+docker start my_container
+使用 docker stop，因为它允许容器执行清理操作，但在某些情况下，可能需要使用 docker kill 来强制终止容器。
+docker exec -it myredis bash  使用命令行进入容器中
+docker exec -it myredis redis-cli 直接进行进入redis服务器
+
+docker inspect html 查看名称为html的数据卷的信息  
+使用docker volume create命令创建数据卷时，可以指定数据卷的名称，但不能直接指定数据卷的具体位置。Docker会在其内部数据卷存储区域创建和管理这些数据卷
+也可以在run时直接指定挂载的路径 这样子docker会创建一个随机名字的数据卷
+- docker volume create：创建数据卷
+- docker volume ls：查看所有数据卷
+- docker volume inspect：查看数据卷详细信息，包括关联的宿主机目录位置
+- docker volume rm：删除指定数据卷
+- docker volume prune：删除所有未使用的数据卷
+
+docker run \
+--name mysql \
+-d \
+-p 3306:3306 \
+--restart unless-stopped \
+-e MYSQL_ROOT_PASSWORD=root \
+-v mysqldata:/var/lib/mysql \
+mysql:5.7
+
+mysql数据卷挂载错了可能会启动不起来  挂载时要保证目录存在
+
+## 通过Docker命令进入Mysql容器内部
+docker exec -it mysql /bin/bash   或者  docker exec -it mysql bash
+之后
+mysql -uroot -p
+
+docker使用dockerfile制作镜像
+可以分层 继承其他人做好的层 比如java的jdk等  需要先拉取对应镜像
+运行前pull镜像或拷贝jdk 然后到有dokcerfile和jar包的文件夹中运行这个命令
+docker build -t javaweb:1.0 .
+Dockerfile 是根据jdk打包 
+Dockerfile java8根据镜像继承打包
+
+
+到有compose.yaml的文件夹中运行 docker-compose up -d  运行compose
+docker-compose logs -f
+查看日志 可能因为没有连接到nacos而启动失败  需要重启
+运行日志指令也需要到有docker-compose.yaml的文件夹中运行
+查看所有运行服务
+docker-compose config --services  
+根据服务名重启服务 注意服务名和容器名是不一样的 服务名即docker-compose文件中的命名
+docker-compose restart userservice orderservice gateway
+
+mysql的ports可能有但不一定做了映射 注意观察格式
+
+测试地址http://192.168.75.129:10010/user/2?authorization=admin
+
+docker可以搭建私有仓库 还没去学
