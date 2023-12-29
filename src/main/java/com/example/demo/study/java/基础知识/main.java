@@ -1,16 +1,7 @@
 package com.example.demo.study.java.基础知识;
 
 
-// TODO: 2023/4/21 再捋一下 
 /**
- * 
- * 
- * 原子性
- * 一致性
- * 隔离性
- * 持久性
- *
- *
  * 基本数据类型
  *
  * IntegerCache 来缓存一定范围的值，IntegerCache 默认情况下范围为：-128~127。
@@ -40,4 +31,7 @@ package com.example.demo.study.java.基础知识;
  * bigdecimal bigInteger
  */
 public class main {
+    public static void main(String[] args) {
+
+    }
 }

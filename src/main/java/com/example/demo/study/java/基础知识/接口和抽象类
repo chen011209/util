@@ -1,0 +1,29 @@
+接口
+普通方法
+默认方法
+静态方法
+
+public interface MyInterface {
+    // 抽象方法
+    void myMethod();
+
+    // 静态方法
+    static void staticMethod() {
+        System.out.println("Static Method");
+    }
+
+    // 默认方法
+    default void defaultMethod() {
+        System.out.println("Default Method");
+    }
+}
+
+//静态方法不用创建实例就可以直接调用 默认方法需要创建实例后调用
+
+MyInterface.staticMethod(); // 调用静态方法
+MyInterface myObj = new MyInterfaceImpl();
+myObj.defaultMethod(); // 调用默认方法
+
+抽象类
+和普通类的区别是可以有抽象方法 子类继承父类必须重写抽象方法 是强制性的
+也可以有普通的方法正常实现 可以选择性重写不重写
