@@ -1,0 +1,6 @@
+ShardingSphere分库分表
+Redis
+RabbitMq消息队列
+Dubbo RPC
+Seata 分布式事务框架
+服务治理组件Zookeeper

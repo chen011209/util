@@ -2,7 +2,7 @@ package com.example.demo.study.sql;
 
 public class sql {
 	/**
-	 *
+	 * 在查询过程中执行顺序：from>where>group（含聚合）>having>order>select。
 	 */
 
 

@@ -1,0 +1,6 @@
+ping不通虚拟机原因：1、使用vpn未关闭  可以关闭后重启试下 可能上次关机前没有关闭vpn 2、防火墙
+
+mysql主从同步失败 sql_thread 为no 可能是重启后 主库的日志文件和position改变 需要重新指定
+CHANGE MASTER TO MASTER_HOST='192.168.184.134',
+MASTER_USER='atguigu_slave',MASTER_PASSWORD='123456', MASTER_PORT=3306,
+MASTER_LOG_FILE='binlog.000013',MASTER_LOG_POS=1542;
