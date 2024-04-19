@@ -1,6 +1,13 @@
 ShardingSphere分库分表
+shardingsphere seata的分布式事务、XA的分布式事务
 Redis
 RabbitMq消息队列
 Dubbo RPC
 Seata 分布式事务框架
 服务治理组件Zookeeper
+nginx
+
+java日志规范
+
+解决问题场景 分库分表
+严格顺序执行的并发问题
