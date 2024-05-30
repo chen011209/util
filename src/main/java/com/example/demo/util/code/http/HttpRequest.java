@@ -52,6 +52,15 @@ public class HttpRequest {
         return builder.toString();
     }
 
+    public static void main(String[] args) throws IOException {
+
+        for (int i = 0; i < 100; i++) {
+            System.out.println(new HttpRequest().httpGetString("http://jgxy.jxutcm.edu.cn/info/1118/2026.htm"));;
+
+        }
+
+    }
+
 
     /**
      * 需要加这个依赖建立http
